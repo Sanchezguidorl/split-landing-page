@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import img1 from "./assets/images/ps52.jpg";
+import img2 from "./assets/images/xbox.jpg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div id="App">
+        <div id="Image-bg">
+          <img src={img1} alt="PlayStation image" />
+        </div>
+        <div id="Image-overlay">
+          <div className="overlay-transparent">
+            <div>
+            <h1>PlayStation</h1>
+            <button className="button button-playstation">Buy Now</button>
+            </div>
+          </div>
+          <div className="image-overlay-container">
+            <img src={img2} alt="Xbox image" />
+            <div className="image-overlay-content">
+            <h1>Xbox</h1>
+            <button className="button button-xbox">Buy Now</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
